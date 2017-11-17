@@ -1,0 +1,23 @@
+{
+  "name": "voice-markup-generator",
+  "version": "1.0.0",
+  "description": "a simple html markup generator based on speech to text conversion",
+  "main": "index.js",
+  "scripts": {
+    "start":"live-server dest & gulp"
+  },
+  "author": "Aniruddh Upparna",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.2.1",
+    "live-server": "^1.2.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

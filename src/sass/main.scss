@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: consolas;
+    scr: url(../assets/fonts/Consolas.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #3f7bcf;
+}
+
+// styling for header part 
+
+.page-header {
+    height: 75px;
+    width:100%;
+    background: rgba(0, 0, 0 , 0.6);
+    box-shadow: 0px 5px 8px black;
+    color: white;
+    .title {
+        padding: 24px;
+        font-size: 24px;
+        font-family: 'Roboto';
+        font-weight: bold;
+    }
+}
+
+.main-section {
+    width:95%;
+    margin: 0 auto;
+    .left-section {
+        width:40%;
+        background: white;
+        height: 545px;
+        display: inline-block;
+        margin: 20px 30px;
+        padding: 20px;
+        border-radius: 5%;
+        box-shadow: 5px 5px 8px black;
+        overflow: hidden;
+        font-family: 'Roboto';
+        .left-title {
+            font-size: 25px;
+        }
+        .mic-container {
+            background: #1352e3;
+            // #db0f0f
+            // #edecec
+            // #250fdb
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            padding: 20px;
+            box-shadow: 5px 3px 5px black;
+            margin:45px auto;
+            cursor: pointer;
+            .mic-image {
+                width: 60px;
+                height: 60px;
+                padding: 5px;
+            }
+        }
+        .confirmation-input {
+            border: none;
+            border-bottom: 2px solid #1352e3;
+            outline:none;
+            font-family: 'Roboto';
+            font-size: 25px;
+            width:90%;
+            margin:30px 20px;
+        }
+    }
+    .right-section {
+        width:40%;
+        background: rgb(19, 19, 19);
+        max-height: 545px;
+        height: 545px;
+        display: inline-block;
+        margin: 20px 30px;
+        border-radius: 5%;
+        padding: 20px;
+        overflow: hidden;
+        .code-area {
+            width:99%;
+            height: 540px;
+            border-radius: 10px;
+            overflow: scroll;
+            background: rgb(19, 19, 19);
+            color: #1add1a;
+            font-weight: bold;
+            font-size: 15px;
+            font-family: consolas;
+            outline: none;
+            border: 1px solid black;
+            resize: none;
+        }
+    }
+}
+
+.page-footer {
+    height: 100px;
+    background: rgba(0, 0, 0 , 0.6);
+}
+
+::-webkit-scrollbar {
+    width:10px;
+}
+::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
