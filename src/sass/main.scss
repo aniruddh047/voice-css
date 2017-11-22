@@ -1,8 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-
 @font-face {
     font-family: consolas;
-    scr: url(../assets/fonts/Consolas.ttf);
+    src: url(fonts/Consolas.ttf);
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto.ttf);
 }
 
 body {
@@ -22,8 +25,14 @@ body {
     .title {
         padding: 24px;
         font-size: 24px;
-        font-family: 'Roboto';
+        font-family: Roboto;
         font-weight: bold;
+        .help-icon {
+            float: right;
+            width:45px;
+            margin: -7px 30px 0 0;
+            cursor: pointer;
+        }
     }
 }
 
@@ -40,9 +49,9 @@ body {
         border-radius: 5%;
         box-shadow: 5px 5px 8px black;
         overflow: hidden;
-        font-family: 'Roboto';
+        font-family: roboto;
         .left-title {
-            font-size: 25px;
+            font-size: 15px;
         }
         .mic-container {
             background: #1352e3;
@@ -66,10 +75,22 @@ body {
             border: none;
             border-bottom: 2px solid #1352e3;
             outline:none;
-            font-family: 'Roboto';
-            font-size: 25px;
+            font-family: roboto;
+            font-size: 15px;
             width:90%;
             margin:30px 20px;
+        }
+        .confirm-button{
+            background: rgb(19, 82, 227);
+            padding: 10px 20px;
+            margin-left: 20px;
+            color: white;
+            font-family: roboto;
+            cursor: pointer;
+            border: 1px solid white;
+        }
+        label {
+            margin: 0 0 0 20px;
         }
     }
     .right-section {
@@ -94,11 +115,48 @@ body {
             font-family: consolas;
             outline: none;
             border: 1px solid black;
-            resize: none;
+            // resize: none;
+            overflow: hidden;
+
         }
     }
 }
 
+
+.hidden {
+    display: none;
+}
+#help-modal {
+    width: 100%;
+    height:  100%;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    background: rgba(0, 0 , 0, 0.7);
+    .modal-body{
+        background: white;
+        width:60%;
+        height:60%;
+        margin: 50px auto;
+        font-family: roboto;
+        box-shadow: 5px 5px 5px black; 
+        .modal-heading {
+            height: 20px;
+            background: green;
+            padding: 10px;
+            color: white;
+            .close-icon {
+                float: right;
+                cursor: pointer;
+                margin-top: -3px;
+            }
+        }
+        .modal-content {
+            padding: 50px;
+        }
+    }
+}
 .page-footer {
     height: 100px;
     background: rgba(0, 0, 0 , 0.6);

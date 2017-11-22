@@ -11,21 +11,38 @@
     </head>
     <body>
         <header class="page-header">
-            <div class="title">Voice markup</div>
+            <div class="title">Voice CSS <img class="help-icon" src="images/help-icon.svg"/></div>
         </header>
 
         <div class="main-section">
             <div class="left-section">
                 <p class="left-title">Click on mic to start</p>
-                <div class="mic-container js-start-speech"><img class="mic-image" src="mic-icon.svg"/></div>
+                <div class="mic-container js-start-speech"><img class="mic-image" src="images/mic-icon.svg"/></div>
                 <label>You just said:</label>
-                <input type="text" class="confirmation-input" />
+                <input class="confirmation-input js-interim-input" ></input>
+                <textarea class="confirmation-input js-final-input">create class with overflow as hidden and border as none and padding as two one pixels</textarea>
+                <button class="confirm-button js-confirm">OK, sounds good</button>
             </div>
             <div class="right-section">
-                <textarea class="code-area"><div></div></textarea>
+                <pre class="code-area">Your syntax will appear here.</pre>
             </div>
         </div>    
     <footer class="page-footer"></footer>
+    <div id="help-modal" class="modal hidden">
+        <div class="modal-body">
+            <div class="modal-heading">Instructions <img class="close-icon" src="images/close-icon.svg" /></div>
+            <div class="modal-content">
+                <p>Tips for accuracy</p>
+                <ul> 
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <p>Sample input: create class example with overflow as hidden and border as none and padding as 21 pixels</p>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="script.js"></script>    
     </body>
 </html>
