@@ -44,12 +44,6 @@ function mainController(){
       };
     }
     
-    // var two_line = /\n\n/g;
-    // var one_line = /\n/g;
-    // function linebreak(s) {
-    //   return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
-    // }
-    
     function startDictation(event) {
       if (recognizing) {
         recognition.stop();
@@ -78,23 +72,8 @@ function mainController(){
         enteredCommand = enteredCommand.replace(/ hyphen /g ,'-');
         enteredCommand = enteredCommand.replace(/with /g,'{\n\    ');
         enteredCommand = enteredCommand.replace(/ pixels/,'px');
-        // enteredCommand = enteredCommand.replace(/ percent/,'%');
-        // enteredCommand = enteredCommand.replace(/ zero/,'0');
-        // enteredCommand = enteredCommand.replace(/ one/,'1');
-        // enteredCommand = enteredCommand.replace(/ two/,'2');
-        // enteredCommand = enteredCommand.replace(/ three/,'3');
-        // enteredCommand = enteredCommand.replace(/ four/,'4');
-        // enteredCommand = enteredCommand.replace(/ five/,'5');
-        // enteredCommand = enteredCommand.replace(/ six/,'6');
-        // enteredCommand = enteredCommand.replace(/ seven/,'7');
-        // enteredCommand = enteredCommand.replace(/ eight/,'8');
-        // enteredCommand = enteredCommand.replace(/ nine/,'9');
         enteredCommand = enteredCommand.replace(/ and /g,';\n    ');
-        enteredCommand = enteredCommand + ';\n }'
-        // var startIndex = enteredCommand.search('create ');
-        // var lastIndex = enteredCommand.search('tag') - 1;
-        // var result = enteredCommand.slice(startIndex,lastIndex);
-        // var finalVal = previousVal +'<'+result+'>'+'</'+result+'>';
+        enteredCommand = enteredCommand + ';\n }';
         var finalVal = previousVal+'\n'+enteredCommand;
         $('.code-area').text(finalVal);
     });
