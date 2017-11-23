@@ -19,12 +19,13 @@
                 <p class="left-title">Click on mic to start</p>
                 <div class="mic-container js-start-speech"><img class="mic-image" src="images/mic-icon.svg"/></div>
                 <label>You just said:</label>
-                <input class="confirmation-input js-interim-input" ></input>
-                <textarea class="confirmation-input js-final-input">create class with overflow as hidden and border as none and padding as two one pixels</textarea>
+                <input class="interim-input js-interim-input" ></input>
+                <textarea class="confirmation-input js-final-input">create class example with overflow as hidden and border as none and padding as 21 pixels</textarea>
                 <button class="confirm-button js-confirm">OK, sounds good</button>
             </div>
             <div class="right-section">
-                <pre class="code-area">Your syntax will appear here.</pre>
+                <pre class="code-area">// Your syntax will appear here.</pre>
+                <div class="copy-clipboard js-copy-clipboard"><img src="images/copy-clipboard-icon.svg" /></div>
             </div>
         </div>    
     <footer class="page-footer"></footer>
@@ -32,14 +33,19 @@
         <div class="modal-body">
             <div class="modal-heading">Instructions <img class="close-icon" src="images/close-icon.svg" /></div>
             <div class="modal-content">
-                <p>Tips for accuracy</p>
+                <p>Tips for accuracy:</p>
                 <ul> 
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>Use in an environment with minimal noise.</li>
+                    <li>Keep recording device close to source of speech.</li>
+                    <li>Separate each property-value pair with 'and' keyword (where you would want a ;)</li>
+                    <li>Separate each property and its value with 'as' keyword (where you would want a :)</li>
                 </ul>
                 <p>Sample input: create class example with overflow as hidden and border as none and padding as 21 pixels</p>
+                <p>Output:<pre> .example {
+        overflow: hidden;
+        border: none;
+        padding: 21px;
+    }</pre>
             </div>
         </div>
     </div>

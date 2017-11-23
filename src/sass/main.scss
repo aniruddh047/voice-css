@@ -51,7 +51,7 @@ body {
         overflow: hidden;
         font-family: roboto;
         .left-title {
-            font-size: 15px;
+            font-size: 17px;
         }
         .mic-container {
             background: #1352e3;
@@ -70,6 +70,18 @@ body {
                 height: 60px;
                 padding: 5px;
             }
+            .mic-recording {
+                animation: recording 1s linear infinite;
+            }
+        }
+        .interim-input {
+            border: none;
+            border-bottom: 2px solid #1352e3;
+            outline:none;
+            font-family: roboto;
+            font-size: 15px;
+            width:90%;
+            margin:30px 20px;
         }
         .confirmation-input {
             border: none;
@@ -79,6 +91,9 @@ body {
             font-size: 15px;
             width:90%;
             margin:30px 20px;
+            min-height:80px;
+            overflow-y:scroll;
+            overflow-x: hidden; 
         }
         .confirm-button{
             background: rgb(19, 82, 227);
@@ -88,6 +103,7 @@ body {
             font-family: roboto;
             cursor: pointer;
             border: 1px solid white;
+            outline: none;
         }
         label {
             margin: 0 0 0 20px;
@@ -116,9 +132,19 @@ body {
             outline: none;
             border: 1px solid black;
             // resize: none;
-            overflow: hidden;
+            overflow: scroll;
 
         }
+       .copy-clipboard { 
+            position: absolute;
+            top: 130px;
+            right: 45px;
+            background: #1352e3;
+            border-radius: 50%;
+            padding: 15px;
+            border: 3px solid white;
+            cursor: pointer;
+       }
     }
 }
 
@@ -162,6 +188,13 @@ body {
     background: rgba(0, 0, 0 , 0.6);
 }
 
+@keyframes recording {
+    0%  {opacity: 1}
+    25% {opacity: .25}
+    50% {opacity: .5}
+    75% {opacity: .75}
+    100% {opacity: 1}
+}
 ::-webkit-scrollbar {
     width:10px;
 }

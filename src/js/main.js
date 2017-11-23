@@ -39,8 +39,6 @@ function mainController(){
           }
         }
         
-        // final_span.innerHTML = linebreak(final_transcript);
-        // interim_span.innerHTML = linebreak(interim_transcript);
         $('.js-interim-input').val(interim_transcript);
         $('.js-final-input').html(final_transcript);
       };
@@ -55,8 +53,12 @@ function mainController(){
     function startDictation(event) {
       if (recognizing) {
         recognition.stop();
+        $('.mic-image').attr('src','images/mic-icon.svg');
+        $('.mic-image').removeClass('mic-recording');
         return;
       }
+      $('.mic-image').attr('src','images/listening-icon.svg');
+      $('.mic-image').addClass('mic-recording');
       final_transcript = '';
       recognition.lang = 'en-US';
       recognition.start();
@@ -93,7 +95,8 @@ function mainController(){
         // var lastIndex = enteredCommand.search('tag') - 1;
         // var result = enteredCommand.slice(startIndex,lastIndex);
         // var finalVal = previousVal +'<'+result+'>'+'</'+result+'>';
-        $('.code-area').text(enteredCommand);
+        var finalVal = previousVal+'\n'+enteredCommand;
+        $('.code-area').text(finalVal);
     });
 }
 
@@ -106,3 +109,15 @@ function mainController(){
     $('body').on('click','.help-icon',function(e){
         $('#help-modal').removeClass('hidden');
     });
+
+    $('body').on('click','.js-copy-clipboard',function(e){
+        copyToClipBoard($('.code-area'));
+    });
+
+    function copyToClipBoard(elem){
+        var temp = $('<input>');
+        $('body').append(temp);;
+        temp.val(elem.html()).select();
+        document.execCommand('copy');
+        temp.remove();
+    }
